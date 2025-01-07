@@ -1,3 +1,0 @@
-/home/harsh/Desktop/BattleshipRemastered/build/CMakeFiles/BattleshipRemastered.dir
-/home/harsh/Desktop/BattleshipRemastered/build/CMakeFiles/edit_cache.dir
-/home/harsh/Desktop/BattleshipRemastered/build/CMakeFiles/rebuild_cache.dir
