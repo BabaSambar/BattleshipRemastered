@@ -23,7 +23,7 @@ namespace BR {
 			else return;
 
 			m_Text.setCharacterSize(26);
-			m_Text.setColor(sf::Color::Black);
+			m_Text.setFillColor(sf::Color::Black);
 			m_Text.setFont(m_Font);
 			m_Text.setString(Title);
 			CenterText();
