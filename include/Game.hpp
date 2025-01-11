@@ -2,8 +2,8 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
-#include <Manager.hpp>
 #include <GameMainMenuState.hpp>
+#include <StateManager.hpp>
 
 namespace BR {
 	class GameLoop {

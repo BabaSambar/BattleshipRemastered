@@ -4,7 +4,6 @@
 #include <SFML/Window.hpp>
 #include <iostream>
 #include <unordered_map>
-#include <State.hpp>
 
 namespace BR {
 	// Generic class which handles texture, sound, audio and fonts
@@ -51,25 +50,4 @@ namespace BR {
 	class TextureManager : public Manager<sf::Texture> {};
 	class FontManager: public Manager<sf::Font> {};
 	class SoundManager : public Manager<sf::Sound> {};
-
-	class StateManager {
-	public:
-		// Private constructor for static classes
-		StateManager() {}
-
-		void SetState(State* _State){
-			m_CurrentState = _State;
-		}
-
-		// Get current state on top of stack
-		State* GetCurrentState() {
-			return m_CurrentState;
-		}
-
-	private:
-		// Store only the active state
-		State* m_CurrentState;
-
-	};
-
 }

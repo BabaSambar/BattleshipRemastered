@@ -4,6 +4,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
 #include <Manager.hpp>
+#include <StateManager.hpp>
 
 namespace BR {
 	class Button {
