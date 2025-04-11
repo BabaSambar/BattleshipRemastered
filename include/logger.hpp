@@ -4,26 +4,27 @@
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
 
-namespace Utility {
+namespace BR {
 	enum class LogType{
+		NONE,
 		ERROR,
 		WARNING,
 		MESSAGE
 	};
 
 	class Logger{
-	public:
-		static Logger* GetInstance(){
-			if(m_Instance = nullptr) m_Instance = new Logger();
-			return m_Instance;
-		}
+	public:	
+		Logger(): m_LogType(LogType::NONE) {}
 
-		void SetLogType(LogType _LogType){
-			m_LogType = _LogType;
+		void setLogType(LogType logType){
+			m_logType = logType;
 		}
 
 		void Log(std::string _Message){
 			switch (m_LogType){
+				case LogType::NONE:
+					std::cout << "[ERROR]: Log type not set. Use `m_Logger.setLogType()`";
+					return;
 				case LogType::ERROR:
 					std::cout << "[ERROR]: ";
 					break;
@@ -39,7 +40,8 @@ namespace Utility {
 
 	private:
 		static Logger* m_Instance;
-		LogType m_LogType;
-		Logger(): m_LogType(LogType::MESSAGE) {}
+		LogType m_logType = LogType::NONE;
 	};
+
+	extern Logger *m_logger;
 }
