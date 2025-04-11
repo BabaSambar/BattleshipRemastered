@@ -2,7 +2,7 @@
 #include <iostream>
 #include <random>
 #include <SFML/Graphics.hpp>
-#include <Manager.hpp>
+#include "managers.hpp"
 
 namespace BR {
 	enum class TileState {
@@ -15,7 +15,7 @@ namespace BR {
 	enum class ShipPart {
 		End,
 		Middle
-	}
+	};
 
 	class Tile {
 	public:
